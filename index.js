@@ -15,7 +15,7 @@ const io = new Server(server, {
 });
 
 // Init admin
-instrument(io, {
+instrument(io(process.env.REACT_APP_BACKEND_URL) {
   auth: false,
 });
 /**
